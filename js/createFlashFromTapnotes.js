@@ -1,4 +1,4 @@
-export const createFlashFromTapNotes = function(tapnotesRaw, id, scArc2) {
+export const createFlashFromTapNotes = function(tapnotesRaw, id, scArc2, scArc3) {
     // tapnotesRaw = '(12345,1);\n(67890,2);\n';
     // id = 'flash';
     // scArc2 = [375, 750, 1000, 10000];
@@ -17,7 +17,7 @@ export const createFlashFromTapNotes = function(tapnotesRaw, id, scArc2) {
             case '3': duration = scArc2[2]; break;
             case '4': duration = scArc2[3]; break;
             }
-            outText += `scenecontrol(${match[0]},${id},${duration},255);\n`;
+            outText += `scenecontrol(${match[0]},${id},${duration},${scArc3});\n`;
         }
     });
 

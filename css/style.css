@@ -1,3 +1,9 @@
+/* :root{
+    --debug-color1: #7fffbf;
+    --debug-color2: #ffff7f;
+    --debug-color3: #ff7f7f;
+} */
+
 .main_field {
     min-width: 200px;
     width: 50%;
@@ -7,15 +13,15 @@
 
 .container{
     max-width: 40em;
-    /* background-color: #7fffbf; */
+    background-color: var(--debug-color1);
 }
 
 .row{
     margin: 5px;
-    /* background-color: #ffff7f; */
+    background-color: var(--debug-color2);
 }
 
 .col{
     margin: 5px;
-    /* background-color: #ff7f7f; */
+    background-color: var(--debug-color3);
 }
