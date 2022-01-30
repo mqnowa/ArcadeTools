@@ -1,0 +1,21 @@
+.main_field {
+    min-width: 200px;
+    width: 50%;
+    margin: auto;
+    border: dotted 2px gray;
+}
+
+.container{
+    max-width: 400px;
+    /* background-color: #7fffbf; */
+}
+
+.row{
+    margin: 5px;
+    /* background-color: #ffff7f; */
+}
+
+.col{
+    margin: 5px;
+    /* background-color: #ff7f7f; */
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>テンプレート</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="css\style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>VentArcadeTool</h1>
+        <h6>SceneControlMakerFromTap</h2>
+        <div class="row">
+            このツールはタップノーツをSceneControlに変換します。<br>
+            <li>SceneControlの種類の指定が出来ます。</li>
+            <li>SceneControlの第3引数をタップノーツのレーンによって決定します。</li>
+            
+        </div>
+        <div class="row">
+            変換するタップノーツ群
+            <div class="input-group">
+                <textarea
+                    name="" id="inputField" cols="30" rows="5" class="form-control"
+                    placeholder="(nnnn,m);&#13;(nnnn,m);&#13;…"
+                ></textarea>
+            </div>
+        </div>
+        <div class="row">
+            SceneControlタイプ
+            <div class="input-group">
+                <input type="text" class="form-control" id='SceneControlType' value="flash">
+            </div>
+        </div>
+        <div class="row">
+            <div>第3引数</div>
+            <div class="input-group">
+                <input type="text" class="form-control" id="scArg2_0" placeholder='1レーン'>
+                <input type="text" class="form-control" id="scArg2_1" placeholder='2レーン'>
+                <input type="text" class="form-control" id="scArg2_2" placeholder='3レーン'>
+                <input type="text" class="form-control" id="scArg2_3" placeholder='4レーン'>
+            </div>
+        </div>
+        <div class="row">
+            <button type="button" id ="exec" class="btn btn-outline-primary">変換</button>
+        </div>
+        <div class="row">
+            <div>出力</div>
+            <div class="input-group">
+                <textarea
+                    name="" id="outputField" cols="30" rows="5" class="form-control"
+                    placeholder="output"
+                ></textarea>
+            </div>
+        </div>
+        <script src="js\SCFlashMakerControler.js" type="module"></script>
+    </div>
+    <!-- <div class="main_field">
+        <textarea name="input1" id="inputField" cols="30" rows="10"></textarea>
+        <textarea name="output1" id="outputField" cols="30" rows="10"></textarea>
+        <input type="button" name="button1" id="button1" value="button">
+        <script src="js\SCFlashMakerControler.js" type="module"></script>
+    </div> -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</body>
+</html>
