@@ -1,0 +1,45 @@
+<div class="row">
+    <div>変換するタップノーツ群</div>
+    <div class="input-group">
+        <textarea
+            name="" id="inputField" cols="30" rows="5" class="form-control"
+            placeholder="(nnnn,m);&#13;(nnnn,m);&#13;…"
+        ></textarea>
+    </div>
+</div>
+<div class="row">
+    <div>SceneControlタイプ</div>
+    <div class="input-group">
+        <input type="text" class="form-control" id='SceneControlType' value="flash">
+    </div>
+</div>
+<div class="row">
+    <div>第3引数</div>
+    <div class="input-group">
+        <input type="text" class="form-control" id="scArg2_0" placeholder='1レーン'>
+        <input type="text" class="form-control" id="scArg2_1" placeholder='2レーン'>
+        <input type="text" class="form-control" id="scArg2_2" placeholder='3レーン'>
+        <input type="text" class="form-control" id="scArg2_3" placeholder='4レーン'>
+    </div>
+</div>
+<div class="row">
+    <div>第4引数以降</div>
+    <div class="input-group">
+        <input type="text" class="form-control" id='scArg3' value="255" placeholder="arg3, arg4, ...">
+    </div>
+</div>
+<div class="row">
+    <div class="input-group">
+        <button type="button" id ="exec" class="btn btn-outline-primary">変換</button>
+    </div>
+</div>
+<div class="row">
+    <div>出力</div>
+    <div class="input-group">
+        <textarea
+            name="" id="outputField" cols="30" rows="5" class="form-control"
+            placeholder="output"
+        ></textarea>
+    </div>
+</div>
+<script src="{$root}\js\MakeSCfromTap_Controler.js" type="module"></script>

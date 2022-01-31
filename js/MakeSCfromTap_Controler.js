@@ -1,4 +1,6 @@
-import {createFlashFromTapNotes} from '/js/createFlashFromTapnotes.js'
+import {createFlashFromTapNotes} from '../js/MakeSCfromTap.js'
+
+console.log('MSCTController loaded!')
 
 const inputField = document.getElementById('inputField');
 const SceneControlType = document.getElementById('SceneControlType');
