@@ -1,27 +1,40 @@
 /* :root{
+    --debug-color0: #7fbfff;
     --debug-color1: #7fffbf;
+    --debug-color1_2: #bfff7f;
     --debug-color2: #ffff7f;
     --debug-color3: #ff7f7f;
+    --debug-color4: #bf7fff;
 } */
 
-.main_field {
-    min-width: 200px;
-    width: 50%;
-    margin: auto;
-    border: dotted 2px gray;
+html, body{
+    background-color: var(--debug-color0);
+    height: 100%;
 }
 
 .container{
-    max-width: 40em;
     background-color: var(--debug-color1);
 }
 
-.row{
-    margin: 5px;
+.base_container{
+    max-width: 40em;
+}
+
+.d-flex{
+    max-width: 40em;
+    background-color: var(--debug-color1_2);
+}
+
+div[class*="row"]{
     background-color: var(--debug-color2);
 }
 
-.col{
-    margin: 5px;
+div[class*="col"]{
     background-color: var(--debug-color3);
+}
+
+.appItem{
+    width: 100px;
+    height: 150px;
+    background-color: var(--debug-color4);
 }

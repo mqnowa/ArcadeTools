@@ -1,0 +1,41 @@
+.header {
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.launcher {
+    float: right;
+    pointer-events: auto;
+    text-align: right;
+}
+
+.title  {
+    float: left;
+}
+
+.launcher_button {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    padding: 6px;
+    transition: all 0.2s;
+}
+
+.launcher_card {
+    display: none;
+    z-index: 2;
+}
+
+#launcher_check:checked ~ .launcher_button {
+    background-color: lightgray;
+}
+
+#launcher_check:checked ~ .launcher_card {
+    display: block;
+}
+
+#launcher_check {
+    display: none;
+}

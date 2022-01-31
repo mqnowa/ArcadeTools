@@ -1,0 +1,6 @@
+.app{
+    transition: background-color 0.2s;
+}
+.app:hover {
+    background-color: #90909090;
+}
