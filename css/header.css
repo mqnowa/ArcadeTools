@@ -3,6 +3,8 @@
     inset: 0;
     z-index: 1;
     pointer-events: none;
+    max-width: 40em;
+    margin: auto;
 }
 
 .launcher {
