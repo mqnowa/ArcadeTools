@@ -15,6 +15,7 @@
 
 .title  {
     float: left;
+    pointer-events: auto;
 }
 
 .launcher_button {
