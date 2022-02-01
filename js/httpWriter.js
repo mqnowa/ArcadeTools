@@ -13,15 +13,17 @@ function Writer(src, rootDir){
     });
 }
 
-dir = getParam('appname')
+dir = getParam('app')
 function WriterAppResourceByAppname(resource, rootDir){
-    if(!dir) dir = 'NoQuery'
+    if(!dir) dir = 'NoQuery';
+    appRoot = rootDir + 'Apps/' + dir + '/';
     $.ajax({
-        url: rootDir + 'html/' + dir + '/' +  resource, //パスはcommon.jsが読み込まれたHTMLファイルが基準
+        url: rootDir + 'Apps/' + dir + '/' +  resource, //パスはcommon.jsが読み込まれたHTMLファイルが基準
         cache: false, //キャッシュを利用するか（お好みで）
         async: false, //非同期で読み込むか（お好みで）
         success: function(html){
             html = html.replace(/\{\$root\}/g, rootDir);
+            html = html.replace(/\{\$approot\}/g, appRoot);
             document.write(html);
         },
         error: function(){

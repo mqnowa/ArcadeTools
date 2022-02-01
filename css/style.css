@@ -38,3 +38,18 @@ div[class*="col"]{
     height: 150px;
     background-color: var(--debug-color4);
 }
+
+
+
+#copiedAlertCheck:checked ~ #copiedAlert {
+    opacity: 1;
+}
+
+#copiedAlert {
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+#copiedAlertCheck {
+    display: none;
+}
