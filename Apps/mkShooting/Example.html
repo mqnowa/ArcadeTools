@@ -1,0 +1,13 @@
+arc(34500,36000,1.00,0.00,siso,1.00,0.00,0,none,true)[arctap(34500)]<br>
+↓
+<pre>
+timinggroup(){
+  timing(0,160.00,4.00);
+  scenecontrol(0,movenotes,1,-0.50,0.00,-25.00,0,0,0,0);
+  timing(33745,99999.00,4.00);
+  timing(33750,0.01,4.00);
+  scenecontrol(33750,movenotes,750,0,0,0,1,1,2,0);
+  arc(34500,34501,1.00,1.00,s,1.00,1.00,0,none,true)[arctap(34500)];
+  timing(34500,160.00,4.00);
+};
+</pre>
