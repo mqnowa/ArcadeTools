@@ -1,0 +1,110 @@
+<div class="container">
+    <div class="row mb-2">
+    </div>
+    <div class="row mb-2">
+        <div class="col">
+            SVGを読み込む
+            <div class="input-group">
+                <input type="File" id="fileInput" class="form-control" accept=".svg">
+            </div>
+        </div>
+    </div>
+    <div class="row mb-2">
+        <div class="col">
+            Arcの時間
+            <div class="input-group">
+                <input type="text" id="textInput-timing" class="form-control" accept=".svg" value="0">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            書き込む範囲
+        </div>
+    </div>
+    <div class="row mb-2">
+        <div class="col">
+            左下
+            <div class="input-group">
+                <input type="text" id="textInput-startX" class="form-control" accept=".svg" value="0.00">
+                <input type="text" id="textInput-startY" class="form-control" accept=".svg" value="0.00">
+            </div>
+        </div>
+        <div class="col">
+            右上
+            <div class="input-group">
+                <input type="text" id="textInput-endX" class="form-control" accept=".svg" value="1.00">
+                <input type="text" id="textInput-endY" class="form-control" accept=".svg" value="1.00">
+            </div>
+        </div>
+    </div>
+    <div class="row mb-2">
+        <div class="col">
+            <div class="card bg-light">
+                <div class="container">
+                    <div class="row mb-2">
+                        高度なオプション
+                    </div>
+                    <div class="row mb-2">
+                        <div class="col">
+                            精査する間隔（上げすぎるとフリーズするかも）
+                            <div class="input-group">
+                                <input type="text" id="textInput-accuracy" class="form-control" accept=".svg" value="100">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            チェックポイント生成の条件
+                        </div>
+                    </div>
+                    <div class="row mb-2">
+                        <div class="col">
+                            角度変化（°）
+                            <div class="input-group">
+                                <input type="text" id="textInput-angle" class="form-control" accept=".svg" value="22.5">
+                            </div>
+                        </div>
+                        <div class="col">
+                            長さ（幅何等分）
+                            <div class="input-group">
+                                <input type="text" id="textInput-length" class="form-control" accept=".svg" value="5">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class="col">
+            <div class="input-group">
+                <buttontype="button" id ="exec" class="btn btn-outline-primary">変換</button>
+            </div>
+        </div>
+    </div>
+    <div class="row mb-2">
+        <div class="col">
+            <div class="input-group">
+                <textarea name="" id="outputField" class="form-control" cols="30" rows="5" readonly></textarea>
+                <button id ="copyButton" class="btn btn-outline-secondary">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                        <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+                        <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+                      </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <input type="checkbox" id="copiedAlertCheck">
+            <div class="alert alert-success" id="copiedAlert" role="alert">コピーされました！</div>
+        </div>
+    </div>
+</div>
+
+
+<script src="{$approot}/Controler.js" type="module"></script>
+<script src="{$approot}/Clip.js"></script>
