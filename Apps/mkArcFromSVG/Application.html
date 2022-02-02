@@ -3,7 +3,7 @@
     </div>
     <div class="row mb-2">
         <div class="col">
-            SVGを読み込む
+            SVG選択
             <div class="input-group">
                 <input type="File" id="fileInput" class="form-control" accept=".svg">
             </div>
@@ -49,26 +49,26 @@
                         <div class="col">
                             精査する間隔（上げすぎるとフリーズするかも）
                             <div class="input-group">
-                                <input type="text" id="textInput-accuracy" class="form-control" accept=".svg" value="100">
+                                <input type="text" id="textInput-accuracy" class="form-control" accept=".svg" value="300" placeholder="おすすめは100～5000">
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
-                            チェックポイント生成の条件
+                            チェックポイント生成閾値
                         </div>
                     </div>
                     <div class="row mb-2">
                         <div class="col">
-                            角度変化（°）
+                            角度（°）
                             <div class="input-group">
-                                <input type="text" id="textInput-angle" class="form-control" accept=".svg" value="22.5">
+                                <input type="text" id="textInput-angle" class="form-control" accept=".svg" value="22.5" placeholder="おすすめは10～30">
                             </div>
                         </div>
                         <div class="col">
                             長さ（幅何等分）
                             <div class="input-group">
-                                <input type="text" id="textInput-length" class="form-control" accept=".svg" value="5">
+                                <input type="text" id="textInput-length" class="form-control" accept=".svg" value="5" placeholder="おすすめは1～10">
                             </div>
                         </div>
                     </div>
